@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class AuthPlaceholder: UITextField, Jiggerable {}
 
@@ -20,8 +21,21 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func LogIn(_ sender: Any) {
-
+        signInOnComplete(completion: {
+            ProgressHUD.showSuccess("Logged in")
+            self.navigationController?.popViewController(animated: true)
+        }) { (error) in
+            ProgressHUD.showError(error)
+        }
     }
-
-
+    
+    private func signInOnComplete(completion: @escaping () -> (), error: @escaping (String) -> ()) {
+        view.endEditing(true)
+        ProgressHUD.show()
+        AuthService.signIn(email: emailLabel.text!, password: passwordLabel.text!, signedIn: {
+            completion()
+        }) { (er) in
+            error(er!)
+        }
+    }
 }

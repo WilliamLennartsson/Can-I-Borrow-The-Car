@@ -9,16 +9,16 @@
 import Foundation
 import ProgressHUD
 
-extension RegisterUserViewController {
+extension SignUpViewController {
 
     func labelsNotEmpty() -> Bool {
-        if (usernameTextField.text?.isEmpty)! {
+        if (userNameLabel.text?.isEmpty)! {
             ProgressHUD.showError("Fill in user name")
             return false
-        } else if (emailTextField.text?.isEmpty)! {
+        } else if (emailLabel.text?.isEmpty)! {
             ProgressHUD.showError("Fill in email")
             return false
-        } else if (passwordTextField.text?.isEmpty)! {
+        } else if (passwordLabel.text?.isEmpty)! {
             ProgressHUD.showError("Fill in password")
             return false
         } else if isPicturePicked == false {

@@ -10,14 +10,33 @@ import UIKit
 
 class CarTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var LicencePlate: UILabel!
-    @IBOutlet weak var Model: UILabel!
-    @IBOutlet weak var Owner: UILabel!
-    
-    var car: String? {
+    @IBOutlet weak var licencePlate: UILabel!
+    @IBOutlet weak var model: UILabel!
+    @IBOutlet weak var ownerImageView: UIImageView! {
         didSet {
-            Model.text = "hej"
+            AppStyle.cirlceUIImageView(image: ownerImageView)
         }
+    }
+    
+    var car: CarModel? {
+        didSet {
+            fetchCarInformation()
+        }
+    }
+    
+    var user: UserModel? {
+        didSet {
+            fetchUserInformation()
+        }
+    }
+    
+    func fetchUserInformation() {
+        SdSetImage.fetchUserImage(image: ownerImageView, user: user!, photo: nil)
+    }
+    
+    func fetchCarInformation() {
+        licencePlate.text = car?.licensePlate
+        model.text = car?.model
     }
     
     override func awakeFromNib() {

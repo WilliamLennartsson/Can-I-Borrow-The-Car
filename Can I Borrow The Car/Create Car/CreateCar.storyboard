@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYF-b0-iSR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hC4-cq-9bn">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,97 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
-        <scene sceneID="QFM-Ke-G4g">
-            <objects>
-                <viewController id="BYF-b0-iSR" customClass="ProfileViewController" customModule="Can_I_Borrow_The_Car" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="N26-kG-9Hq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0In-my-3dD">
-                                <rect key="frame" x="0.0" y="44" width="375" height="250"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="URU-kz-8Xq">
-                                        <rect key="frame" x="137.66666666666666" y="40" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="7hD-Sv-THD"/>
-                                            <constraint firstAttribute="height" constant="100" id="H5A-ku-2hx"/>
-                                            <constraint firstAttribute="width" secondItem="URU-kz-8Xq" secondAttribute="height" multiplier="1:1" id="syn-ZS-gQP"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Namn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2p-bx-9T4">
-                                        <rect key="frame" x="50" y="156" width="275" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="axD-o5-yGn"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="DarkTheme"/>
-                                <constraints>
-                                    <constraint firstItem="URU-kz-8Xq" firstAttribute="centerY" secondItem="0In-my-3dD" secondAttribute="centerY" constant="-35" id="Pnd-pR-dbR"/>
-                                    <constraint firstItem="URU-kz-8Xq" firstAttribute="centerX" secondItem="0In-my-3dD" secondAttribute="centerX" id="SaP-gQ-j2q"/>
-                                    <constraint firstItem="I2p-bx-9T4" firstAttribute="centerX" secondItem="URU-kz-8Xq" secondAttribute="centerX" id="bHA-kp-QU3"/>
-                                    <constraint firstItem="I2p-bx-9T4" firstAttribute="leading" secondItem="0In-my-3dD" secondAttribute="leading" constant="50" id="fQR-Ht-L7U"/>
-                                    <constraint firstAttribute="height" constant="250" id="kEV-gO-C36"/>
-                                    <constraint firstAttribute="trailing" secondItem="I2p-bx-9T4" secondAttribute="trailing" constant="50" id="loj-Rq-RQ5"/>
-                                    <constraint firstItem="I2p-bx-9T4" firstAttribute="top" secondItem="URU-kz-8Xq" secondAttribute="bottom" constant="16" id="z5B-QG-hg9"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomBorderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4F-UI-veN">
-                                <rect key="frame" x="20" y="310" width="335" height="60"/>
-                                <color key="backgroundColor" name="ButtonColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="muG-rW-D8b"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Add your car">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="hC4-cq-9bn" kind="show" id="Un6-Eo-OpX"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" name="DarkTheme"/>
-                        <constraints>
-                            <constraint firstItem="0In-my-3dD" firstAttribute="leading" secondItem="DBu-KD-fbK" secondAttribute="leading" id="1j0-42-SwM"/>
-                            <constraint firstItem="0In-my-3dD" firstAttribute="top" secondItem="DBu-KD-fbK" secondAttribute="top" id="4uB-aO-pIh"/>
-                            <constraint firstItem="s4F-UI-veN" firstAttribute="leading" secondItem="DBu-KD-fbK" secondAttribute="leading" constant="20" id="7ba-A8-4xD"/>
-                            <constraint firstItem="s4F-UI-veN" firstAttribute="top" secondItem="0In-my-3dD" secondAttribute="bottom" constant="16" id="Z3E-6n-q6e"/>
-                            <constraint firstItem="0In-my-3dD" firstAttribute="trailing" secondItem="DBu-KD-fbK" secondAttribute="trailing" id="lCp-Og-kDZ"/>
-                            <constraint firstItem="DBu-KD-fbK" firstAttribute="trailing" secondItem="s4F-UI-veN" secondAttribute="trailing" constant="20" id="pkp-jZ-pt2"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="DBu-KD-fbK"/>
-                    </view>
-                    <connections>
-                        <outlet property="userNameLabel" destination="I2p-bx-9T4" id="3bo-lt-aAg"/>
-                        <outlet property="userProfileImage" destination="URU-kz-8Xq" id="k5v-UH-zDi"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="afu-5K-ahX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1928.985507246377" y="-5.3571428571428568"/>
-        </scene>
         <!--Create Car View Controller-->
         <scene sceneID="7qN-3t-Jhm">
             <objects>
@@ -195,13 +104,38 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xp1-H3-ygX">
+                                <rect key="frame" x="20" y="350" width="335" height="60"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nvx-fA-SDg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="uploadCar_Button:" destination="hC4-cq-9bn" eventType="touchUpInside" id="dOa-kQ-efZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="DarkTheme"/>
                         <constraints>
+                            <constraint firstItem="2wx-cY-goS" firstAttribute="trailing" secondItem="Xp1-H3-ygX" secondAttribute="trailing" constant="20" id="5UK-Ck-bgV"/>
+                            <constraint firstItem="Xp1-H3-ygX" firstAttribute="leading" secondItem="2wx-cY-goS" secondAttribute="leading" constant="20" id="NSe-8a-oAh"/>
                             <constraint firstItem="UNf-OP-u62" firstAttribute="top" secondItem="2wx-cY-goS" secondAttribute="top" constant="4" id="RJx-8a-4ba"/>
                             <constraint firstItem="UNf-OP-u62" firstAttribute="leading" secondItem="2wx-cY-goS" secondAttribute="leading" constant="20" id="Uw3-Um-rdR"/>
                             <constraint firstItem="2wx-cY-goS" firstAttribute="trailing" secondItem="UNf-OP-u62" secondAttribute="trailing" constant="20" id="Xhj-vm-Hgy"/>
                             <constraint firstItem="2wx-cY-goS" firstAttribute="trailing" secondItem="oy8-EF-DEK" secondAttribute="trailing" constant="20" id="Yg5-0M-DBi"/>
+                            <constraint firstItem="Xp1-H3-ygX" firstAttribute="top" secondItem="oy8-EF-DEK" secondAttribute="bottom" constant="8" id="ZMa-GN-f7a"/>
                             <constraint firstItem="oy8-EF-DEK" firstAttribute="leading" secondItem="2wx-cY-goS" secondAttribute="leading" constant="20" id="hEY-0W-OXv"/>
                             <constraint firstItem="oy8-EF-DEK" firstAttribute="top" secondItem="UNf-OP-u62" secondAttribute="bottom" constant="8" id="uD9-Lc-WVw"/>
                         </constraints>
@@ -221,7 +155,6 @@
     </scenes>
     <resources>
         <image name="car" width="192" height="192"/>
-        <image name="placeholderProfileImage" width="225" height="225"/>
         <namedColor name="ButtonColor">
             <color red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

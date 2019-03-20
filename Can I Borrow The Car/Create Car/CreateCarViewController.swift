@@ -7,24 +7,81 @@
 //
 
 import UIKit
+import ProgressHUD
+
+class CreateCarPlaceholder: UITextField, Jiggerable {}
 
 class CreateCarViewController: UIViewController {
 
+    @IBOutlet weak var carImageView: UIImageView!
+    @IBOutlet weak var carNameText: CreateCarPlaceholder!
+    @IBOutlet weak var licencePlateText: CreateCarPlaceholder!
+    @IBOutlet weak var modelText: CreateCarPlaceholder!
+    
+    var selectImageFromPicker: UIImage?
+    var emptyField = true
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        changeCarImageOnClick()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
+    @IBAction func uploadCar_Button(_ sender: Any) {
+        handleFields()
+        if emptyField == false {
+            createCar()
+        }
+    }
+    
+    func createCar() {
+        let photo = selectImageFromPicker
+        ProgressHUD.show("Processing...")
+        if let carImage = photo {
+            if let imageData = carImage.jpegData(compressionQuality: 0.1) {
+                API.Car.uploadCar(carName: carNameText.text!, licencePlate: licencePlateText.text!, model: modelText.text!, imageData: imageData, completion: {
+                    ProgressHUD.showSuccess("Car created")
+                    self.resetCar()
+                    self.navigationController?.popViewController(animated: true)
+                }) { (error) in
+                    ProgressHUD.showError(error)
+                }
+            }
+        } else {
+            ProgressHUD.showError("Image can't be empty")
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func resetCar() {
+        self.carNameText.text = ""
+        self.licencePlateText.text = ""
+        self.modelText.text = ""
+        self.selectImageFromPicker = nil
     }
-    */
+    
+    func handleFields() {
+        if carNameText.text!.isEmpty {
+            carNameText.jigger()
+            emptyField = true
+        }
+        
+        if licencePlateText.text!.isEmpty {
+            licencePlateText.jigger()
+            emptyField = true
+        }
+        
+        if modelText.text!.isEmpty {
+            modelText.jigger()
+            emptyField = true
+        }
+        
+        if carNameText.text!.isEmpty == false && licencePlateText.text!.isEmpty == false && modelText.text!.isEmpty == false {
+            emptyField = false
+        }
+        
+    }
 
 }

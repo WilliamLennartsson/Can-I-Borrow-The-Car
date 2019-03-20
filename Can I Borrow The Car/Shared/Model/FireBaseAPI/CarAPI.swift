@@ -22,13 +22,12 @@ class CarApi {
             uploaded(snapshot)
         }
     }
-
     
     func observeCarsWithId(withId id: String, completion: @escaping (CarModel) -> Void) {
-        refCarUrl.child(id).observe(.childAdded) { (snapshot) in
-            if let dict = snapshot.value as? [String: Any]  {
+        refCarUrl.child(id).observeSingleEvent(of: .value) { snapshot in
+            if let dict = snapshot.value as? [String: Any] {
                 let key = snapshot.key
-                let car = CarModel.transformCarToDict(dict: dict, key: key)
+                let car = CarModel.transformCarToDict(dict: dict, key: key )
                 completion(car)
             }
         }
@@ -39,7 +38,7 @@ class CarApi {
 //MARK - CRUD
 extension CarApi {
     
-    func uploadCar(carName: String, licencePlate: String, model: String, imageData: Data, completion: @escaping () -> ()) {
+    func uploadCar(carName: String, licencePlate: String, model: String, imageData: Data, completion: @escaping () -> (), onError: ((String?) -> Void)? = nil) {
         let photoString = UUID().uuidString
         refCarStorage.child(photoString)
         refCarStorage.putData(imageData, metadata: nil) { (metadata, error) in
@@ -51,13 +50,13 @@ extension CarApi {
                     return
                 }
                 let carImageUrl = url?.absoluteString
-                self.sendCarDataToDatabase(potoUrl: carImageUrl!, carName: carName, licencePlate: licencePlate, model: model, completion: completion)
+                self.sendCarDataToDatabase(potoUrl: carImageUrl!, carName: carName, licencePlate: licencePlate, model: model, completion: completion, onError: onError)
             })
             
         }
     }
     
-    private func sendCarDataToDatabase(potoUrl: String, carName: String, licencePlate: String, model: String, completion: @escaping () -> Void) {
+    private func sendCarDataToDatabase(potoUrl: String, carName: String, licencePlate: String, model: String, completion: @escaping () -> Void, onError: ((String?) -> Void)? = nil) {
         guard let currentUser = Auth.auth().currentUser else { return }
         let newCarId = refCarUrl.childByAutoId().key
         let newCarReference = refCarUrl.child(newCarId!)
@@ -68,8 +67,18 @@ extension CarApi {
                 return
             }
             
-            API.Feed.refFeed.child(currentUserId).child(newCarId!).setValue(true)
-            self.refMyCars.child(currentUserId).child(newCarId!).setValue(true)
+            API.Feed.refFeed.child(currentUserId).child(newCarId!).setValue(true, withCompletionBlock: { (error, _) in
+                if error != nil {
+                    onError!(error!.localizedDescription)
+                    return
+                }
+            })
+            self.refMyCars.child(currentUserId).child(newCarId!).setValue(true, withCompletionBlock: { (error, _) in
+                if error != nil {
+                    onError!(error!.localizedDescription)
+                    return
+                }
+            })
             completion()
         }
         

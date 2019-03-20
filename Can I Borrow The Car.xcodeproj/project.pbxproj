@@ -7,21 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8725478722410BFE00EA6577 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725478622410BFE00EA6577 /* CarTableViewCell.swift */; };
+		8725478C22410EB500EA6577 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725478B22410D6A00EA6577 /* UserModel.swift */; };
+		8725478D22410EB800EA6577 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725478922410D6A00EA6577 /* CarModel.swift */; };
+		8725479122410F3000EA6577 /* CarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725479022410F3000EA6577 /* CarAPI.swift */; };
+		872547932241179400EA6577 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547922241179400EA6577 /* UserApi.swift */; };
+		87254795224117B300EA6577 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87254794224117B300EA6577 /* API.swift */; };
+		87254797224117F200EA6577 /* FeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87254796224117F200EA6577 /* FeedAPI.swift */; };
+		872547992241185E00EA6577 /* FollowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547982241185D00EA6577 /* FollowAPI.swift */; };
+		8725479E22411CCC00EA6577 /* Flashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725479C22411CC500EA6577 /* Flashable.swift */; };
+		8725479F22411CCE00EA6577 /* Jiggerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8725479D22411CC500EA6577 /* Jiggerable.swift */; };
+		872547A222411D2600EA6577 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547A122411D2600EA6577 /* LoginViewController.swift */; };
+		872547A422411D3400EA6577 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547A322411D3400EA6577 /* SignUpViewController.swift */; };
+		872547A52241203300EA6577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875234B9223FC9970082004E /* Assets.xcassets */; };
+		872547AC22412CBC00EA6577 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872547AB22412CBC00EA6577 /* SignUp.storyboard */; };
+		872547AE22412CFB00EA6577 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872547AD22412CFB00EA6577 /* LogIn.storyboard */; };
+		872547B222412D5D00EA6577 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547B122412D5D00EA6577 /* AuthService.swift */; };
+		872547B72241335100EA6577 /* Register+ButtonFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547B62241334400EA6577 /* Register+ButtonFade.swift */; };
+		872547B82241335400EA6577 /* Register+CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547B52241334400EA6577 /* Register+CameraPicker.swift */; };
+		872547BA2241344200EA6577 /* SdSetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547B92241344200EA6577 /* SdSetImage.swift */; };
+		872547BC2241344900EA6577 /* UIView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547BB2241344900EA6577 /* UIView+Tap.swift */; };
+		872547BE2241345C00EA6577 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547BD2241345C00EA6577 /* UIApplication.swift */; };
+		872547C02241346700EA6577 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547BF2241346700EA6577 /* UIViewController.swift */; };
+		872547C22241347600EA6577 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547C12241347600EA6577 /* AppStyle.swift */; };
+		872547C62241377100EA6577 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 872547C52241377100EA6577 /* GoogleService-Info.plist */; };
+		872547C92241433600EA6577 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547C82241433600EA6577 /* ProfileViewController.swift */; };
+		872547CB2242827C00EA6577 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872547CA2242827C00EA6577 /* Profile.storyboard */; };
+		872547CE2242837E00EA6577 /* CreateCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547CD2242837E00EA6577 /* CreateCarViewController.swift */; };
+		872547D0224286E300EA6577 /* CreateCarView+CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547CF224286E300EA6577 /* CreateCarView+CameraPicker.swift */; };
+		872547D222428AF500EA6577 /* CreateCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872547D122428AF500EA6577 /* CreateCar.storyboard */; };
 		875234B3223FC9960082004E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875234B2223FC9960082004E /* AppDelegate.swift */; };
-		875234B5223FC9960082004E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875234B4223FC9960082004E /* ViewController.swift */; };
-		875234B8223FC9960082004E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875234B6223FC9960082004E /* Main.storyboard */; };
-		875234BA223FC9970082004E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875234B9223FC9970082004E /* Assets.xcassets */; };
-		875234BD223FC9970082004E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875234BB223FC9970082004E /* LaunchScreen.storyboard */; };
+		875234CE223FECFA0082004E /* SelfSizedCarTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875234CD223FECFA0082004E /* SelfSizedCarTableView.swift */; };
+		875234D0223FECFD0082004E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875234CF223FECFD0082004E /* MainViewController.swift */; };
+		875234D42240D9A30082004E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875234D32240D9A30082004E /* UIView.swift */; };
+		875234EB2240E2140082004E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875234EA2240E2140082004E /* Config.swift */; };
+		8782DE5D2240EFD900FE7A83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875234D1223FED010082004E /* Main.storyboard */; };
+		9B0ED3182CEDE21254DBCB69 /* Pods_Can_I_Borrow_The_Car.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2AE090F50C69EE1A0EAF56 /* Pods_Can_I_Borrow_The_Car.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31855C169B5091C6C4E287EF /* Pods-Can I Borrow The Car.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Can I Borrow The Car.debug.xcconfig"; path = "Target Support Files/Pods-Can I Borrow The Car/Pods-Can I Borrow The Car.debug.xcconfig"; sourceTree = "<group>"; };
+		6249807DDE0A189CB035350E /* Pods-Can I Borrow The Car.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Can I Borrow The Car.release.xcconfig"; path = "Target Support Files/Pods-Can I Borrow The Car/Pods-Can I Borrow The Car.release.xcconfig"; sourceTree = "<group>"; };
+		872547822241068600EA6577 /* UIColor+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Assets.swift"; sourceTree = "<group>"; };
+		8725478622410BFE00EA6577 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		8725478922410D6A00EA6577 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		8725478B22410D6A00EA6577 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8725479022410F3000EA6577 /* CarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAPI.swift; sourceTree = "<group>"; };
+		872547922241179400EA6577 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		87254794224117B300EA6577 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		87254796224117F200EA6577 /* FeedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPI.swift; sourceTree = "<group>"; };
+		872547982241185D00EA6577 /* FollowAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowAPI.swift; sourceTree = "<group>"; };
+		8725479C22411CC500EA6577 /* Flashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashable.swift; sourceTree = "<group>"; };
+		8725479D22411CC500EA6577 /* Jiggerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jiggerable.swift; sourceTree = "<group>"; };
+		872547A122411D2600EA6577 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		872547A322411D3400EA6577 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		872547AB22412CBC00EA6577 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignUp.storyboard; path = "Can I Borrow The Car/Sign Up/SignUp.storyboard"; sourceTree = SOURCE_ROOT; };
+		872547AD22412CFB00EA6577 /* LogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
+		872547B122412D5D00EA6577 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		872547B52241334400EA6577 /* Register+CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Register+CameraPicker.swift"; sourceTree = "<group>"; };
+		872547B62241334400EA6577 /* Register+ButtonFade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Register+ButtonFade.swift"; sourceTree = "<group>"; };
+		872547B92241344200EA6577 /* SdSetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdSetImage.swift; sourceTree = "<group>"; };
+		872547BB2241344900EA6577 /* UIView+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Tap.swift"; sourceTree = "<group>"; };
+		872547BD2241345C00EA6577 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		872547BF2241346700EA6577 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		872547C12241347600EA6577 /* AppStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		872547C52241377100EA6577 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		872547C82241433600EA6577 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		872547CA2242827C00EA6577 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		872547CD2242837E00EA6577 /* CreateCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCarViewController.swift; sourceTree = "<group>"; };
+		872547CF224286E300EA6577 /* CreateCarView+CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateCarView+CameraPicker.swift"; sourceTree = "<group>"; };
+		872547D122428AF500EA6577 /* CreateCar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateCar.storyboard; sourceTree = "<group>"; };
 		875234AF223FC9960082004E /* Can I Borrow The Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Can I Borrow The Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		875234B2223FC9960082004E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		875234B4223FC9960082004E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		875234B7223FC9960082004E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		875234B9223FC9970082004E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		875234BC223FC9970082004E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		875234BE223FC9970082004E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		875234CD223FECFA0082004E /* SelfSizedCarTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSizedCarTableView.swift; sourceTree = "<group>"; };
+		875234CF223FECFD0082004E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		875234D1223FED010082004E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		875234D32240D9A30082004E /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		875234EA2240E2140082004E /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		BE2AE090F50C69EE1A0EAF56 /* Pods_Can_I_Borrow_The_Car.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Can_I_Borrow_The_Car.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +95,167 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B0ED3182CEDE21254DBCB69 /* Pods_Can_I_Borrow_The_Car.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E4D77E39B11DB0106DBEA43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31855C169B5091C6C4E287EF /* Pods-Can I Borrow The Car.debug.xcconfig */,
+				6249807DDE0A189CB035350E /* Pods-Can I Borrow The Car.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		872547812241067C00EA6577 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				872547822241068600EA6577 /* UIColor+Assets.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		8725478822410D6A00EA6577 /* FireBaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				8725478922410D6A00EA6577 /* CarModel.swift */,
+				8725478B22410D6A00EA6577 /* UserModel.swift */,
+			);
+			path = FireBaseModel;
+			sourceTree = "<group>";
+		};
+		8725478E22410EF800EA6577 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				872547B92241344200EA6577 /* SdSetImage.swift */,
+				872547C12241347600EA6577 /* AppStyle.swift */,
+				872547BB2241344900EA6577 /* UIView+Tap.swift */,
+				872547BF2241346700EA6577 /* UIViewController.swift */,
+				872547BD2241345C00EA6577 /* UIApplication.swift */,
+				875234D32240D9A30082004E /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8725478F22410F1700EA6577 /* FireBaseAPI */ = {
+			isa = PBXGroup;
+			children = (
+				8725479022410F3000EA6577 /* CarAPI.swift */,
+				872547922241179400EA6577 /* UserApi.swift */,
+				87254796224117F200EA6577 /* FeedAPI.swift */,
+				872547982241185D00EA6577 /* FollowAPI.swift */,
+				87254794224117B300EA6577 /* API.swift */,
+			);
+			path = FireBaseAPI;
+			sourceTree = "<group>";
+		};
+		8725479B22411CC500EA6577 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8725479C22411CC500EA6577 /* Flashable.swift */,
+				8725479D22411CC500EA6577 /* Jiggerable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		872547A622412B5B00EA6577 /* Log In */ = {
+			isa = PBXGroup;
+			children = (
+				872547A122411D2600EA6577 /* LoginViewController.swift */,
+				872547AD22412CFB00EA6577 /* LogIn.storyboard */,
+			);
+			path = "Log In";
+			sourceTree = "<group>";
+		};
+		872547A722412B6900EA6577 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				872547B42241334400EA6577 /* Extension */,
+				872547A322411D3400EA6577 /* SignUpViewController.swift */,
+				872547AB22412CBC00EA6577 /* SignUp.storyboard */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		872547A822412B7200EA6577 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				875234B2223FC9960082004E /* AppDelegate.swift */,
+				872547812241067C00EA6577 /* Style */,
+				8725478E22410EF800EA6577 /* Extensions */,
+				872547B322412DB400EA6577 /* Service */,
+				875234C6223FC9A90082004E /* Model */,
+				8725479B22411CC500EA6577 /* Protocol */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		872547A922412B8A00EA6577 /* CarTableView */ = {
+			isa = PBXGroup;
+			children = (
+				8725478622410BFE00EA6577 /* CarTableViewCell.swift */,
+				875234CD223FECFA0082004E /* SelfSizedCarTableView.swift */,
+			);
+			path = CarTableView;
+			sourceTree = "<group>";
+		};
+		872547AA22412BA700EA6577 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				875234CF223FECFD0082004E /* MainViewController.swift */,
+				875234D1223FED010082004E /* Main.storyboard */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		872547B322412DB400EA6577 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				875234EA2240E2140082004E /* Config.swift */,
+				872547B122412D5D00EA6577 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		872547B42241334400EA6577 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				872547B52241334400EA6577 /* Register+CameraPicker.swift */,
+				872547B62241334400EA6577 /* Register+ButtonFade.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		872547C72241432000EA6577 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				872547C82241433600EA6577 /* ProfileViewController.swift */,
+				872547CA2242827C00EA6577 /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		872547CC2242836200EA6577 /* Create Car */ = {
+			isa = PBXGroup;
+			children = (
+				872547CF224286E300EA6577 /* CreateCarView+CameraPicker.swift */,
+				872547CD2242837E00EA6577 /* CreateCarViewController.swift */,
+				872547D122428AF500EA6577 /* CreateCar.storyboard */,
+			);
+			path = "Create Car";
+			sourceTree = "<group>";
+		};
 		875234A6223FC9960082004E = {
 			isa = PBXGroup;
 			children = (
 				875234B1223FC9960082004E /* Can I Borrow The Car */,
 				875234B0223FC9960082004E /* Products */,
+				1E4D77E39B11DB0106DBEA43 /* Pods */,
+				D70E16EF18E7C309CBB5CC80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +270,36 @@
 		875234B1223FC9960082004E /* Can I Borrow The Car */ = {
 			isa = PBXGroup;
 			children = (
-				875234B2223FC9960082004E /* AppDelegate.swift */,
-				875234B4223FC9960082004E /* ViewController.swift */,
-				875234B6223FC9960082004E /* Main.storyboard */,
+				872547A822412B7200EA6577 /* Shared */,
+				872547CC2242836200EA6577 /* Create Car */,
+				872547C72241432000EA6577 /* Profile */,
+				872547AA22412BA700EA6577 /* MainPage */,
+				872547A922412B8A00EA6577 /* CarTableView */,
+				872547A722412B6900EA6577 /* Sign Up */,
+				872547A622412B5B00EA6577 /* Log In */,
 				875234B9223FC9970082004E /* Assets.xcassets */,
 				875234BB223FC9970082004E /* LaunchScreen.storyboard */,
+				872547C52241377100EA6577 /* GoogleService-Info.plist */,
 				875234BE223FC9970082004E /* Info.plist */,
 			);
 			path = "Can I Borrow The Car";
+			sourceTree = "<group>";
+		};
+		875234C6223FC9A90082004E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8725478F22410F1700EA6577 /* FireBaseAPI */,
+				8725478822410D6A00EA6577 /* FireBaseModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D70E16EF18E7C309CBB5CC80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE2AE090F50C69EE1A0EAF56 /* Pods_Can_I_Borrow_The_Car.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +309,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 875234C1223FC9970082004E /* Build configuration list for PBXNativeTarget "Can I Borrow The Car" */;
 			buildPhases = (
+				FC5FDEEE6D0C130881353395 /* [CP] Check Pods Manifest.lock */,
 				875234AB223FC9960082004E /* Sources */,
 				875234AC223FC9960082004E /* Frameworks */,
 				875234AD223FC9960082004E /* Resources */,
+				F63C5EC3D3E5F41B860CA7A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,20 +362,109 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875234BD223FC9970082004E /* LaunchScreen.storyboard in Resources */,
-				875234BA223FC9970082004E /* Assets.xcassets in Resources */,
-				875234B8223FC9960082004E /* Main.storyboard in Resources */,
+				872547D222428AF500EA6577 /* CreateCar.storyboard in Resources */,
+				872547CB2242827C00EA6577 /* Profile.storyboard in Resources */,
+				872547AE22412CFB00EA6577 /* LogIn.storyboard in Resources */,
+				872547A52241203300EA6577 /* Assets.xcassets in Resources */,
+				872547C62241377100EA6577 /* GoogleService-Info.plist in Resources */,
+				8782DE5D2240EFD900FE7A83 /* Main.storyboard in Resources */,
+				872547AC22412CBC00EA6577 /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F63C5EC3D3E5F41B860CA7A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Can I Borrow The Car/Pods-Can I Borrow The Car-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Can I Borrow The Car/Pods-Can I Borrow The Car-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC5FDEEE6D0C130881353395 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Can I Borrow The Car-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		875234AB223FC9960082004E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875234B5223FC9960082004E /* ViewController.swift in Sources */,
+				872547BE2241345C00EA6577 /* UIApplication.swift in Sources */,
+				87254795224117B300EA6577 /* API.swift in Sources */,
+				872547BA2241344200EA6577 /* SdSetImage.swift in Sources */,
+				8725478D22410EB800EA6577 /* CarModel.swift in Sources */,
+				872547B72241335100EA6577 /* Register+ButtonFade.swift in Sources */,
+				872547BC2241344900EA6577 /* UIView+Tap.swift in Sources */,
+				872547932241179400EA6577 /* UserApi.swift in Sources */,
+				875234EB2240E2140082004E /* Config.swift in Sources */,
+				8725478C22410EB500EA6577 /* UserModel.swift in Sources */,
+				872547A422411D3400EA6577 /* SignUpViewController.swift in Sources */,
+				872547D0224286E300EA6577 /* CreateCarView+CameraPicker.swift in Sources */,
+				872547C92241433600EA6577 /* ProfileViewController.swift in Sources */,
+				875234D42240D9A30082004E /* UIView.swift in Sources */,
+				87254797224117F200EA6577 /* FeedAPI.swift in Sources */,
+				872547CE2242837E00EA6577 /* CreateCarViewController.swift in Sources */,
+				872547B82241335400EA6577 /* Register+CameraPicker.swift in Sources */,
+				8725478722410BFE00EA6577 /* CarTableViewCell.swift in Sources */,
+				872547C02241346700EA6577 /* UIViewController.swift in Sources */,
+				875234D0223FECFD0082004E /* MainViewController.swift in Sources */,
+				875234CE223FECFA0082004E /* SelfSizedCarTableView.swift in Sources */,
+				872547992241185E00EA6577 /* FollowAPI.swift in Sources */,
+				872547B222412D5D00EA6577 /* AuthService.swift in Sources */,
+				8725479122410F3000EA6577 /* CarAPI.swift in Sources */,
+				872547A222411D2600EA6577 /* LoginViewController.swift in Sources */,
+				872547C22241347600EA6577 /* AppStyle.swift in Sources */,
+				8725479F22411CCE00EA6577 /* Jiggerable.swift in Sources */,
+				8725479E22411CCC00EA6577 /* Flashable.swift in Sources */,
 				875234B3223FC9960082004E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +472,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		875234B6223FC9960082004E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				875234B7223FC9960082004E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		875234BB223FC9970082004E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,6 +601,7 @@
 		};
 		875234C2223FC9970082004E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31855C169B5091C6C4E287EF /* Pods-Can I Borrow The Car.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +620,7 @@
 		};
 		875234C3223FC9970082004E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6249807DDE0A189CB035350E /* Pods-Can I Borrow The Car.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

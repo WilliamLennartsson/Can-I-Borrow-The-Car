@@ -6,9 +6,9 @@
 //  Copyright © 2018 Kristoffer Knape. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-extension ShareViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarDelegate, UITabBarControllerDelegate {
+extension CreateCarViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarDelegate, UITabBarControllerDelegate {
 
     @objc func openCamera() {
         let picker = UIImagePickerController()
@@ -26,14 +26,14 @@ extension ShareViewController: UIImagePickerControllerDelegate, UINavigationCont
         }
 
         if let selectedImage = selectImageFromPicker {
-            cameraHeader.placeHolderImage.image = selectedImage
+            carImageView.image = selectedImage
         }
 
         dismiss(animated: true, completion: nil)
     }
 
-    func changeProfileImageOnClick() {
-        cameraHeader.placeHolderImage.addTapGestureRecognizer {
+    func changeCarImageOnClick() {
+        carImageView.addTapGestureRecognizer {
             self.openCamera()
         }
     }

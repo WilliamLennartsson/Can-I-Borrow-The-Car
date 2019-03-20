@@ -11,8 +11,20 @@ import UIKit
 import Firebase
 import ProgressHUD
 
+enum AuthState {
+    case signedIn, noUser
+}
+
 class AuthService {
 
+    static func authServiceHandler(signedIn: () -> Void, noUser: () -> Void) {
+        if Auth.auth().currentUser != nil {
+            signedIn()
+        } else {
+            noUser()
+        }
+    }
+    
    static func signIn(email: String, password: String, signedIn: (() -> Void)? = nil, onError: ((String?) -> Void)? = nil) {
       Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
          if let error = error {
@@ -23,15 +35,13 @@ class AuthService {
       }
    }
 
-   static func signOut(currentVC: UIViewController) {
+    static func signOut(completion: (() -> Void)? = nil) {
       do {
-         try Auth.auth().signOut()
+        try Auth.auth().signOut()
+        completion?()
       } catch let logoutError {
          ProgressHUD.showError(logoutError.localizedDescription)
       }
-      let storyboard = UIStoryboard(name: Identifier.SignInIdentifier, bundle: nil)
-      let signInVC = storyboard.instantiateViewController(withIdentifier: Storyboard.SignInSB)
-      currentVC.present(signInVC, animated: true, completion: nil)
    }
 
    static func autoSignIn(signedIn: ((UserModel) -> Void)? = nil) {
@@ -42,7 +52,7 @@ class AuthService {
       }
    }
     
-    static func signUp(username: String, email: String, password: String, firstName: String, lastName: String, imageData: Data, signedIn: (() -> Void)? = nil, onError: ((String?) -> Void)? = nil) {
+    static func signUp(username: String, email: String, password: String, imageData: Data, signedIn: (() -> Void)? = nil, onError: ((String?) -> Void)? = nil) {
       Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
          if error != nil {
             onError!(error!.localizedDescription)
@@ -58,17 +68,17 @@ class AuthService {
             }
             storageRef.downloadURL(completion: { (url, error) in
                 let profileImageUrl = url?.absoluteString
-                self.setUserInfomation(profileImageUrl: profileImageUrl!, username: username, firstName: firstName, lastName: lastName, email: email, uid: uid!, signedIn: signedIn)
+                self.setUserInfomation(profileImageUrl: profileImageUrl!, username: username, email: email, uid: uid!, signedIn: signedIn)
             })
         })
       })
    }
 
-    static func setUserInfomation(profileImageUrl: String, username: String, firstName: String, lastName: String, email: String, uid: String, signedIn: (() -> Void)? = nil) {
+    static func setUserInfomation(profileImageUrl: String, username: String, email: String, uid: String, signedIn: (() -> Void)? = nil) {
       let ref = Database.database().reference()
       let usersReference = ref.child(AuthConfig.userUrl)
       let newUserReference = usersReference.child(uid)
-        newUserReference.setValue([FIRModelStrings.username: username, FIRModelStrings.usernameLowerCase: username.lowercased(), FIRModelStrings.email: email, FIRModelStrings.firstName: firstName, FIRModelStrings.lastName: lastName , FIRModelStrings.profileImageUrl: profileImageUrl])
+        newUserReference.setValue([FIRModelStrings.username: username, FIRModelStrings.usernameLowerCase: username.lowercased(), FIRModelStrings.email: email, FIRModelStrings.firstName: nil, FIRModelStrings.lastName: nil , FIRModelStrings.profileImageUrl: profileImageUrl])
       signedIn!()
    }
 

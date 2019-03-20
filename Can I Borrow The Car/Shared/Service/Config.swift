@@ -45,8 +45,8 @@ struct FIRModelStrings {
 }
 
 struct AuthConfig {
-    static let FIRUrl = "https://caniborrowthecar.firebaseio.com/"
-    static let storageUrl = "gs://caniborrowthecar.appspot.com"
+    static let FIRUrl = "https://can-i-borrow-the-car.firebaseio.com/"
+    static let storageUrl = "gs://can-i-borrow-the-car.appspot.com"
     static let userUrl = "users"
     static let profilePictureUrl = "profile_image"
     static let carUrl = "cars"
@@ -61,6 +61,7 @@ struct AuthConfig {
 struct Identifier {
     static let SignUpIdentifier = "SignUp"
     static let SignInIdentifier = "SignIn"
+    static let editProfile = "EditProfile"
 
 }
 

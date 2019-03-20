@@ -10,21 +10,50 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var userProfileImage: UIImageView! {
+        didSet {
+            AppStyle.circleUIView(image: userProfileImage)
+        }
+    }
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    var user: UserModel! {
+        didSet {
+            self.userNameLabel.text = user.username
+            SdSetImage.fetchUserImage(image: userProfileImage, user: user)
+        }
+    }
+    var cars: [CarModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        fetchUser()
+        fetchMyCars()
+        signOutBarButtonItem()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func fetchUser() {
+        API.User.observeCurrentUser { user in
+            self.user = user
+        }
     }
-    */
+    
+    func fetchMyCars() {
+        API.Car.observeMyCars { snapshot in
+            API.Car.observeCarsWithId(withId: snapshot.key, completion: { car in
+                self.cars.append(car)
+            })
+        }
+    }
+    
+    func signOutBarButtonItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit profile", style: .plain, target: self, action: #selector(editProfile))
+    }
+    
+    @objc func editProfile() {
+        performSegue(withIdentifier: Identifier.editProfile, sender: nil)
+    }
+
+
 
 }
