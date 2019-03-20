@@ -62,6 +62,7 @@ struct Identifier {
     static let SignUpIdentifier = "SignUp"
     static let SignInIdentifier = "SignIn"
     static let editProfile = "EditProfile"
+    static let searchUsers = "SearchUsers"
 
 }
 

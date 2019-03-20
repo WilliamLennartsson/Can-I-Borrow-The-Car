@@ -13,5 +13,6 @@ struct API {
     static var User = UserAPI()
     static var Car = CarApi()
     static var Feed = FeedAPI()
+    static var Follow = FollowAPI()
     
 }

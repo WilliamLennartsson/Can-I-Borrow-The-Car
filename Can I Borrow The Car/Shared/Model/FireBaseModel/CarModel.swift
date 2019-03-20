@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CarModel {
+class CarModel {
     
     var id : String?
     var photoUrl: String?
@@ -22,7 +22,7 @@ struct CarModel {
 
 extension CarModel {
     static func transformCarToDict(dict: [String: Any], key: String) -> CarModel {
-        var car = CarModel()
+        let car = CarModel()
         car.id = key
         car.name = dict[FIRModelStrings.name] as? String
         car.model = dict[FIRModelStrings.model] as? String

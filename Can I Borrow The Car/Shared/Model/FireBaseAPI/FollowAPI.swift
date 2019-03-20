@@ -17,7 +17,8 @@ class FollowAPI {
         API.Car.refMyCars.child(id).observeSingleEvent(of: .value) { snapshot in
             if let dict = snapshot.value as? [String: Any] {
                 for key in dict.keys {
-                    Database.database().reference().child(AuthConfig.feedUrl).child(API.User.currentUser!.uid).child(key).setValue(true)                }
+                    Database.database().reference().child(AuthConfig.feedUrl).child(API.User.currentUser!.uid).child(key).setValue(true)
+                }
             }
         }
         Ref_Followers.child(id).child(API.User.currentUser!.uid).setValue(true)
@@ -28,7 +29,8 @@ class FollowAPI {
         API.Car.refMyCars.child(id).observeSingleEvent(of: .value) { snapshot in
             if let dict = snapshot.value as? [String: Any] {
                 for key in dict.keys {
-                    Database.database().reference().child(AuthConfig.feedUrl).child(API.User.currentUser!.uid).child(key).removeValue()              }
+                    Database.database().reference().child(AuthConfig.feedUrl).child(API.User.currentUser!.uid).child(key).removeValue()
+                }
             }
         }
         Ref_Followers.child(id).child(API.User.currentUser!.uid).setValue(NSNull())

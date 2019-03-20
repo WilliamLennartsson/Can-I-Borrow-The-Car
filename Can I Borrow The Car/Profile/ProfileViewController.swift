@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         fetchUser()
         fetchMyCars()
-        signOutBarButtonItem()
+        setBarButtonItems()
     }
     
     func fetchUser() {
@@ -46,12 +46,17 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    func signOutBarButtonItem() {
+    func setBarButtonItems() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit profile", style: .plain, target: self, action: #selector(editProfile))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "discover"), style: .plain, target: self, action: #selector(searchUsers))
     }
     
     @objc func editProfile() {
         performSegue(withIdentifier: Identifier.editProfile, sender: nil)
+    }
+    
+    @objc func searchUsers() {
+        performSegue(withIdentifier: Identifier.searchUsers, sender: nil)
     }
 
 

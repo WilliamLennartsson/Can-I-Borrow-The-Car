@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UserModel {
+class UserModel {
     var id: String?
     var username: String?
     var email: String?
@@ -20,7 +20,7 @@ struct UserModel {
 
 extension UserModel {
     static func transformUserToDict(dict: [String: Any], key: String) -> UserModel {
-        var user = UserModel()
+        let user = UserModel()
         
         user.username = dict[FIRModelStrings.username] as? String
         user.email = dict[FIRModelStrings.email] as? String

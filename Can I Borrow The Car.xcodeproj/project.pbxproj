@@ -36,6 +36,10 @@
 		872547CE2242837E00EA6577 /* CreateCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547CD2242837E00EA6577 /* CreateCarViewController.swift */; };
 		872547D0224286E300EA6577 /* CreateCarView+CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547CF224286E300EA6577 /* CreateCarView+CameraPicker.swift */; };
 		872547D222428AF500EA6577 /* CreateCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872547D122428AF500EA6577 /* CreateCar.storyboard */; };
+		872547D92242AD3200EA6577 /* SearchUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547D82242AD3200EA6577 /* SearchUsersViewController.swift */; };
+		872547DC2242B34100EA6577 /* SearchView+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547DB2242B34100EA6577 /* SearchView+SearchBar.swift */; };
+		872547DE2242B35100EA6577 /* SearchView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547DD2242B35100EA6577 /* SearchView+TableView.swift */; };
+		872547E12242BCC700EA6577 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872547E02242BCC700EA6577 /* UsersTableViewCell.swift */; };
 		875234B3223FC9960082004E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875234B2223FC9960082004E /* AppDelegate.swift */; };
 		875234CE223FECFA0082004E /* SelfSizedCarTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875234CD223FECFA0082004E /* SelfSizedCarTableView.swift */; };
 		875234D0223FECFD0082004E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875234CF223FECFD0082004E /* MainViewController.swift */; };
@@ -77,6 +81,10 @@
 		872547CD2242837E00EA6577 /* CreateCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCarViewController.swift; sourceTree = "<group>"; };
 		872547CF224286E300EA6577 /* CreateCarView+CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateCarView+CameraPicker.swift"; sourceTree = "<group>"; };
 		872547D122428AF500EA6577 /* CreateCar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateCar.storyboard; sourceTree = "<group>"; };
+		872547D82242AD3200EA6577 /* SearchUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersViewController.swift; sourceTree = "<group>"; };
+		872547DB2242B34100EA6577 /* SearchView+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchView+SearchBar.swift"; sourceTree = "<group>"; };
+		872547DD2242B35100EA6577 /* SearchView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchView+TableView.swift"; sourceTree = "<group>"; };
+		872547E02242BCC700EA6577 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		875234AF223FC9960082004E /* Can I Borrow The Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Can I Borrow The Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		875234B2223FC9960082004E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		875234B9223FC9970082004E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -249,6 +257,41 @@
 			path = "Create Car";
 			sourceTree = "<group>";
 		};
+		872547D42242A7EC00EA6577 /* CarFeedView */ = {
+			isa = PBXGroup;
+			children = (
+				872547A922412B8A00EA6577 /* CarTableView */,
+			);
+			path = CarFeedView;
+			sourceTree = "<group>";
+		};
+		872547D72242AD1B00EA6577 /* SearchUsers */ = {
+			isa = PBXGroup;
+			children = (
+				872547DF2242BC9C00EA6577 /* SearchUserCell */,
+				872547DA2242B1D900EA6577 /* Extension */,
+				872547D82242AD3200EA6577 /* SearchUsersViewController.swift */,
+			);
+			path = SearchUsers;
+			sourceTree = "<group>";
+		};
+		872547DA2242B1D900EA6577 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				872547DB2242B34100EA6577 /* SearchView+SearchBar.swift */,
+				872547DD2242B35100EA6577 /* SearchView+TableView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		872547DF2242BC9C00EA6577 /* SearchUserCell */ = {
+			isa = PBXGroup;
+			children = (
+				872547E02242BCC700EA6577 /* UsersTableViewCell.swift */,
+			);
+			path = SearchUserCell;
+			sourceTree = "<group>";
+		};
 		875234A6223FC9960082004E = {
 			isa = PBXGroup;
 			children = (
@@ -271,10 +314,11 @@
 			isa = PBXGroup;
 			children = (
 				872547A822412B7200EA6577 /* Shared */,
+				872547D42242A7EC00EA6577 /* CarFeedView */,
 				872547CC2242836200EA6577 /* Create Car */,
+				872547D72242AD1B00EA6577 /* SearchUsers */,
 				872547C72241432000EA6577 /* Profile */,
 				872547AA22412BA700EA6577 /* MainPage */,
-				872547A922412B8A00EA6577 /* CarTableView */,
 				872547A722412B6900EA6577 /* Sign Up */,
 				872547A622412B5B00EA6577 /* Log In */,
 				875234B9223FC9970082004E /* Assets.xcassets */,
@@ -446,6 +490,7 @@
 				872547BC2241344900EA6577 /* UIView+Tap.swift in Sources */,
 				872547932241179400EA6577 /* UserApi.swift in Sources */,
 				875234EB2240E2140082004E /* Config.swift in Sources */,
+				872547E12242BCC700EA6577 /* UsersTableViewCell.swift in Sources */,
 				8725478C22410EB500EA6577 /* UserModel.swift in Sources */,
 				872547A422411D3400EA6577 /* SignUpViewController.swift in Sources */,
 				872547D0224286E300EA6577 /* CreateCarView+CameraPicker.swift in Sources */,
@@ -453,12 +498,15 @@
 				875234D42240D9A30082004E /* UIView.swift in Sources */,
 				87254797224117F200EA6577 /* FeedAPI.swift in Sources */,
 				872547CE2242837E00EA6577 /* CreateCarViewController.swift in Sources */,
+				872547D92242AD3200EA6577 /* SearchUsersViewController.swift in Sources */,
+				872547DE2242B35100EA6577 /* SearchView+TableView.swift in Sources */,
 				872547B82241335400EA6577 /* Register+CameraPicker.swift in Sources */,
 				8725478722410BFE00EA6577 /* CarTableViewCell.swift in Sources */,
 				872547C02241346700EA6577 /* UIViewController.swift in Sources */,
 				875234D0223FECFD0082004E /* MainViewController.swift in Sources */,
 				875234CE223FECFA0082004E /* SelfSizedCarTableView.swift in Sources */,
 				872547992241185E00EA6577 /* FollowAPI.swift in Sources */,
+				872547DC2242B34100EA6577 /* SearchView+SearchBar.swift in Sources */,
 				872547B222412D5D00EA6577 /* AuthService.swift in Sources */,
 				8725479122410F3000EA6577 /* CarAPI.swift in Sources */,
 				872547A222411D2600EA6577 /* LoginViewController.swift in Sources */,
